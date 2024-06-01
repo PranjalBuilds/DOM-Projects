@@ -1,19 +1,16 @@
-var Status = document.querySelector('h5');
-var btn = document.querySelector('#add');
-var check = 0;
+var con = document.querySelector("#container");
+var love = document.querySelector("i");
 
-btn.addEventListener("click", function () {
-  if(check == 0) {
-    Status.innerHTML = 'Friends!';
-    Status.style.color = 'green';
-    btn.innerHTML = 'Remove Friend';
-    check = 1
-  }
+con.addEventListener("dblclick", function() {
+  love.style.transform = 'translate(-50%, -50%) scale(1)';
+  love.style.opacity = 0.8;
 
-  else {
-    Status.innerHTML = 'Stranger!';
-    Status.style.color = 'red';
-    btn.innerHTML = 'Add Friend';
-    check = 0;
-  }
-});
+  setTimeout(function () {  
+  love.style.opacity = 0;
+  },1000)
+  
+  setTimeout(function () {  
+  love.style.transform = 'translate(-50%, -50%) scale(1)';
+  },2000)
+  
+})
